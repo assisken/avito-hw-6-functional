@@ -104,16 +104,13 @@ def first(iterable: Iterable[Any]) -> Optional[Any]:
 
 
 def last(iterable: Iterable[Any]) -> Optional[Any]:
-    """
+    """Возвращает последний элемент в последовательности или None
     >>> foo = (x for x in range(10))
     >>> last(foo)
     9
     >>> last(range(0))
     """
-    iterator = iter(iterable)
     i = None
-    try:
-        while True:
-            i = next(iterator)
-    except StopIteration:
-        return i
+    for i in iterable:
+        pass
+    return i
