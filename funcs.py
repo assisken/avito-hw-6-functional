@@ -100,10 +100,7 @@ def first(iterable: Iterable[Any]) -> Optional[Any]:
     0
     >>> first(range(0))
     """
-    try:
-        return next(iter(iterable))
-    except StopIteration:
-        return
+    return next(iter(iterable), None)
 
 
 def last(iterable: Iterable[Any]) -> Optional[Any]:
